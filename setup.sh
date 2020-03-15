@@ -1,7 +1,8 @@
 #!/bin/bash
 # Sets up and hosts the unhackable website
 
-rm -f websandbox/uploads/*
+rm -rf websandbox/uploads
+mkdir websandbox/uploads
 
 if php -i | grep -q "mysqli"; then
 	echo "mysqli PHP module installed. Continuing..."
