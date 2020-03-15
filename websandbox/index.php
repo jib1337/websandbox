@@ -14,12 +14,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Welcome to my site</title>
+	<title>Welcome to my forum</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
 <div class="header">
-	<h2>The unhackable website</h2>
+	<h2>Welcome to my forum</h2>
 </div>
 <div class="content">
   	<?php if (isset($_SESSION['success'])) : ?>

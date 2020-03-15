@@ -2,12 +2,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>The Unhackable Website</title>
+  <title>Welcome to my forum</title>
   <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
   <div class="header">
-    <h2>The Unhackable Website</h2>
+    <h2>Welcome to my forum</h2>
   </div>
 <div class="content">
   <?php include('errors.php'); ?>

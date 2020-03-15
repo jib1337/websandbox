@@ -56,8 +56,8 @@ if (isset($_POST['reg_user'])) {
 
 // User Login
 if (isset($_POST['login_user'])) {
-  $username = mysqli_real_escape_string($db, $_POST['username']);
-  $password = mysqli_real_escape_string($db, $_POST['password']);
+  $username = $_POST['username'];
+  $password = $_POST['password'];
 
   if (empty($username)) {
     array_push($errors, "Username is required");
@@ -89,16 +89,56 @@ if (isset($_POST['login_user'])) {
 if (isset($_POST['post_comment'])) {
 
   // Receive all input values from the form
-  $comment = mysqli_real_escape_string($db, $_POST['comment']);
+  $comment = $_POST['comment'];
   $username = mysqli_real_escape_string($db, $_POST['from']);
 
   if (empty($comment)) { array_push($errors, "Comment can't be blank"); }
 
+  if (isset($_POST["upload"])) {
+    // image upload stuff
+    $target_dir = "uploads/";
+    $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
+    $uploadOk = 1;
+    $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
+
+    if(isset($_POST["submit"])) {
+      $uploadOk = 1;
+    }
+
+    // Check if file already exists
+    if (file_exists($target_file)) {
+        array_push($errors, "The file already exists.");
+        $uploadOk = 0;
+    }
+    // Check file size
+    if ($_FILES["fileToUpload"]["size"] > 500000) {
+        array_push($errors, "Your file is too large.");
+        $uploadOk = 0;
+    }
+
+    // Check if $uploadOk is set to 0 by an error
+    if (count($errors) != 0) {
+        array_push($errors, "Your file was not uploaded.");
+
+    // if everything is ok, try to upload file
+    } else {
+        if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
+            $_SESSION['success'] = "The file ". basename( $_FILES["fileToUpload"]["name"]). " has been uploaded.";
+            $image = basename($_FILES["fileToUpload"]["name"]);
+        } else {
+            array_push($errors, "There was an error uploading your file.");
+        }
+    }
+  }
+
   // Add the comment
   if (count($errors) == 0) {
 
-    $query = "INSERT INTO comments (comment, fromuser) 
-          VALUES('$comment', '$username')";
+    if (isset($_POST["upload"])) {
+      $query = "INSERT INTO comments (comment, fromuser, image) VALUES ('$comment', '$username', '". basename( $_FILES["fileToUpload"]["name"]). "')";
+    } else {
+      $query = "INSERT INTO comments (comment, fromuser) VALUES ('$comment', '$username')";
+    }
     mysqli_query($db, $query);
     $_SESSION['success'] = "Comment Posted";
 

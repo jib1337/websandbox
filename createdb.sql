@@ -14,4 +14,10 @@ create table comments (
 	id int not null auto_increment, 
 	comment varchar(200) not null,
 	fromuser varchar(100) not null,
+	image varchar(255) null,
 	PRIMARY KEY ( id ));
+
+insert into users (username, password, email, admin)
+values (
+	'admin', 'd83374167372baf70c14ad4385447cae', 'admin@myforum.com', 'true'
+);
