@@ -3,20 +3,18 @@
 
 A small forum site for testing several different basic web attacks.
 
+## A few possible attacks
+- Reflected/stored XSS
+- SQL injection
+- File upload exploits
+- Password attacks
+
 ## Usage Overview
+1. Clone the repo: `git clone https://github.com/jib1337/websandbox`
+2. Set the setup script execute permissions: `cd websandbox; chmod +x setup.sh`
+3. Run the setup script: `./setup.sh`
 
 ### Dependancies:
 * mysql
 * mysql php module
 * php
-
-1. Clone the repository
-2. Within the repo directory, set the permissions for the setup script
-```
-chmod +x setup.sh
-```
-3. Run the setup script:
-```
-./setup.sh
-```
-4. Site should now be reachable.
