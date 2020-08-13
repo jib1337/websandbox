@@ -8,7 +8,7 @@ if php -i | grep -q "mysqli"
 then
 	echo "mysqli PHP module installed. Continuing..."
 else
-	echo "Please install the mysqli PHP module: sudo apt install php-mysqli"
+	echo "Error: mysqli PHP module not found"
 	exit 1
 fi
 
