@@ -9,7 +9,7 @@ A small forum site for testing several different basic web attacks.
 - File upload exploits
 - Password attacks
 
-## Usage Overview
+## Usage 
 1. Clone the repo: `git clone https://github.com/jib1337/websandbox`
 2. Set the setup script execute permissions: `cd websandbox; chmod +x setup.sh`
 3. Run the setup script: `./setup.sh`
