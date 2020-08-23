@@ -24,5 +24,5 @@ else
 	exit 1
 fi
 
-echo "Starting PHP service on port 8080..."
-php -S 127.0.0.1:8080 -t websandbox/
+echo "Starting PHP service on port 8000..."
+php -S 127.0.0.1:8000 -t websandbox/
