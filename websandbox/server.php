@@ -6,6 +6,7 @@ $username = "";
 $email    = "";
 $admin    = "";
 $comments = "";
+$comment  = "";
 $errors = array();
 
 // connect to the database
