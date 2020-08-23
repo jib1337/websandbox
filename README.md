@@ -14,8 +14,8 @@ A small forum site for testing several different basic web attacks.
 2. Set the setup script execute permissions: `cd websandbox; chmod +x setup.sh`
 3. Run the setup script: `./setup.sh`
   
-Note: You will require adeqate permissions to create and run mysql databases, as well as a PHP server.  
-If nessecary, run as root (remembering the "don't connect to a public network" part of course):
+Note: You will require adequate permissions to create and run mysql databases, as well as a PHP server.  
+If neccesary, run as root (remembering the "don't connect to a public network" part of course):
 `sudo ./setup.sh`
 
 ### Dependancies:

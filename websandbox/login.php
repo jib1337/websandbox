@@ -28,6 +28,8 @@
     <button type="submit" class="btn" name="register">Sign Up</button>
   </form>
 </div>
-<div class="content"><h3><a href="about.php?version=1%2e2">About</a></h3></div>
+<div class="content">
+<div class="aboutlinks"><a href="about.php?version=1%2e2">About</a></div>
+</div>
 </body>
 </html>

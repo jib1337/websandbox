@@ -19,7 +19,6 @@ h2 {
 
 h3 {
   font-size: 20px;
-  text-align: right;
 }
 
 label {
@@ -31,7 +30,16 @@ p {
 }
 
 .about {
+  font-size: 20px;
+  font-weight: bold;
   text-align: center;
+}
+
+a, .aboutlinks {
+  font-size: 20px;
+  font-weight: bold;
+  text-align: right;
+  color: blue;
 }
 
 .commentheader {
