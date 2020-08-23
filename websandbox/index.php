@@ -43,17 +43,17 @@
       </form>
     <?php endif ?>
     <?php  if (isset($_SESSION['username'])) : ?>
-      <form method="get" action="addcomment.php">
-        <button type="submit" class="btn" name="comment">Post Comment</button>
+      <form method="get" action="addmessage.php">
+        <button type="submit" class="btn" name="message">Post Message</button>
       </form>
       <form method="get" action="index.php?logout='1'">
         <button type="submit" class="btn" name="logout">Logout</button>
       </form>
     <?php endif ?>
 </div>
-<div class="header"><h2>Comments</h2></div>
+<div class="header"><h2>Messages</h2></div>
 <div class="content">
-  <?php include('displaycomments.php') ?>
+  <?php include('displaymessages.php') ?>
 </div>
 </body>
 </html>

@@ -10,9 +10,9 @@ create table users (
 	admin char(5) not null,
 	PRIMARY KEY ( id ));
 
-create table comments ( 
+create table messages ( 
 	id int not null auto_increment, 
-	comment varchar(200) not null,
+	message varchar(200) not null,
 	fromuser varchar(100) not null,
 	image varchar(255) null,
 	PRIMARY KEY ( id ));

@@ -40,15 +40,16 @@ a, .aboutlinks {
   font-weight: bold;
   text-align: right;
   color: blue;
+  text-decoration: none;
 }
 
-.commentheader {
+.messageheader {
   font-size: 20px;
   font-weight: bold;
   text-align: left;
 }
 
-.comment {
+.message {
   border: 1px solid #B0C4DE;
   border-bottom: none;
 }
@@ -62,7 +63,7 @@ a, .aboutlinks {
   padding: 20px;
 }
 
-.commentmain {
+.messagemain {
   font-size: 20px;
   color: black;
   text-align: left;

@@ -5,8 +5,8 @@ session_start();
 $username = "";
 $email    = "";
 $admin    = "";
-$comments = "";
-$comment  = "";
+$messages = "";
+$message  = "";
 $errors = array();
 
 // connect to the database
@@ -87,13 +87,13 @@ if (isset($_POST['login_user'])) {
 }
 
 // Post Comment
-if (isset($_POST['post_comment'])) {
+if (isset($_POST['post_message'])) {
 
   // Receive all input values from the form
-  $comment = $_POST['comment'];
+  $message = $_POST['message'];
   $username = mysqli_real_escape_string($db, $_POST['from']);
 
-  if (empty($comment)) { array_push($errors, "Comment can't be blank"); }
+  if (empty($message)) { array_push($errors, "Comment can't be blank"); }
 
   if (isset($_POST["upload"])) {
     // image upload stuff
@@ -132,13 +132,13 @@ if (isset($_POST['post_comment'])) {
     }
   }
 
-  // Add the comment
+  // Add the message
   if (count($errors) == 0) {
 
     if (isset($_POST["upload"])) {
-      $query = "INSERT INTO comments (comment, fromuser, image) VALUES ('$comment', '$username', '". basename( $_FILES["fileToUpload"]["name"]). "')";
+      $query = "INSERT INTO messages (message, fromuser, image) VALUES ('$message', '$username', '". basename( $_FILES["fileToUpload"]["name"]). "')";
     } else {
-      $query = "INSERT INTO comments (comment, fromuser) VALUES ('$comment', '$username')";
+      $query = "INSERT INTO messages (message, fromuser) VALUES ('$message', '$username')";
     }
     mysqli_query($db, $query);
     $_SESSION['success'] = "Comment Posted";
