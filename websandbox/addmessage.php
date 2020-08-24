@@ -13,11 +13,11 @@
   <form method="post" action="addmessage.php" enctype='multipart/form-data'>
     <div class="input-group">
       <label>Comment</label>
-      <input type="text" name="message"  style="font-size: 25px" value="<?php echo $message; ?>">
+      <label><textarea type="text" name="message"  style="font-size:25px; width:98%; resize: none; height: 10em;"/></textarea></label>
       <input type="hidden" name="from" value="<?php echo $_SESSION['username']; ?>"/>
         <label><input type="checkbox" id="upload" style="float:left; width:auto; padding-left:50px" name="upload" value="Y">
         Upload an image</label>
-      <input type="file" name="fileToUpload" id="fileToUpload">
+      <label><input type="file" name="fileToUpload" id="fileToUpload" style="width:98%;"></label>
     </div>
     <br>
       <button type="submit" class="btn" name="post_message">Post Message</button>

@@ -1,6 +1,9 @@
 * {
   margin: 0px;
-  padding: 10px;
+  padding-top: 5px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 body {
@@ -85,12 +88,14 @@ a, .aboutlinks {
 .input-group {
   margin: 10px 0px 0px 0px;
 }
+
 .input-group label {
   display: block;
   text-align: left;
   margin: 3px;
 }
-.input-group input {
+
+.input-group input, textarea {
   height: 30px;
   width: 93%;
   padding: 5px 5px;
@@ -114,6 +119,7 @@ a, .aboutlinks {
 form {
   display: inline;
 }
+
 .error {
   width: 92%; 
   margin-top: 5px;
@@ -124,6 +130,7 @@ form {
   font-size: 20px; 
   text-align: left;
 }
+
 .success {
   color: #3c763d; 
   background: #dff0d8; 

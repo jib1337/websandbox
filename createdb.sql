@@ -12,7 +12,7 @@ create table users (
 
 create table messages ( 
 	id int not null auto_increment, 
-	message varchar(200) not null,
+	message varchar(3000) not null,
 	fromuser varchar(100) not null,
 	image varchar(255) null,
 	PRIMARY KEY ( id ));
