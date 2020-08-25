@@ -4,7 +4,11 @@ $messageowner = "";
 $messagetext  = "";
 $row = "";
 
-$db = mysqli_connect('localhost', 'root', '', 'registration');
+$db = @mysqli_connect('localhost', 'root', '', 'registration');
+
+if (!$db) {
+        $db = @mysqli_connect('mysql', 'root', '', 'registration'); 
+}
 
 $query = "SELECT message, fromuser, image FROM messages";
 $messages = mysqli_query($db, $query);

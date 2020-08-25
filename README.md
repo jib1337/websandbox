@@ -22,3 +22,8 @@ If neccesary, run as root (remembering the "don't connect to a public network" p
 * mysql
 * mysql php module
 * php
+
+## Docker
+It is also now possible to start up the site in Docker containers.  
+Please remember that this doesn't add any extra security so the above warnings still apply.
+Should work by running `docker compose up --build`

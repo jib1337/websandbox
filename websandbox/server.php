@@ -10,7 +10,11 @@ $message  = "";
 $errors = array();
 
 // connect to the database
-$db = mysqli_connect('localhost', 'root', '', 'registration');
+$db = @mysqli_connect('localhost', 'root', '', 'registration');
+
+if (!$db) {
+	$db = @mysqli_connect('mysql', 'root', '', 'registration'); 
+}
 
 // Register User
 if (isset($_POST['reg_user'])) {
