@@ -13,6 +13,7 @@ $errors = array();
 $db = @mysqli_connect('localhost', 'root', '', 'registration');
 
 if (!$db) {
+	// In the docker container
 	$db = @mysqli_connect('mysql', 'root', '', 'registration'); 
 }
 
