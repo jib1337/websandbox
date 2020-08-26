@@ -7,8 +7,8 @@ $row = "";
 $db = @mysqli_connect('localhost', 'root', '', 'registration');
 
 if (!$db) {
-				// In the docker container
-        $db = @mysqli_connect('mysql', 'root', '', 'registration'); 
+	// In the docker container
+	$db = @mysqli_connect('mysql', 'root', '', 'registration'); 
 }
 
 $query = "SELECT message, fromuser, image FROM messages";
