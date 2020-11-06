@@ -1,5 +1,5 @@
-# Vulnerable Web Sandbox | Jack Nelson, 2020
-## WARNING: Do not expose this to the internet or any public network.
+# Vulnerable Web Sandbox
+### WARNING: Do not expose this to the internet or any public network.
 
 A small forum site for testing several different basic web attacks.
 
@@ -15,8 +15,7 @@ A small forum site for testing several different basic web attacks.
 3. Run the setup script: `./setup.sh`
   
 Note: You will require adequate permissions to create and run mysql databases, as well as a PHP server.  
-If neccesary, run as root (remembering the "don't connect to a public network" part of course):
-`sudo ./setup.sh`
+`./setup.sh`
 
 ### Dependancies:
 * mysql
